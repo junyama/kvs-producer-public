@@ -6,8 +6,8 @@
 /*
 #define STREAM_NAME "gst_test"
 #define STORAGE_SIZE 512
-#define ACCESS_KEY "AKIA2W5GL7UUMFHV54F4"
-#define SECRET_KEY "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"
+#define ACCESS_KEY "set access key here"
+#define SECRET_KEY "set secret key here"
 #define AWS_REGION "ap-south-1"
 
 #define KVS_ADD_METADATA_G_STRUCT_NAME "kvs-add-metadata"
