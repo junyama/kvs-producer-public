@@ -35,8 +35,8 @@ See more:
 #### Using CMake
 
 ##### Pre Requirements
-- `oatpp 1.3.0` 
-- `oatpp-swagger 1.3.0`
+- oat++ v1.3.0 (https://github.com/oatpp/oatpp.git)
+- oatpp-swagger (https://github.com/oatpp/oatpp-swagger)
 ##### Build Project
 ```
 $ mkdir build && cd build
