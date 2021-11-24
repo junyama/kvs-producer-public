@@ -30,51 +30,37 @@ See more:
 
 ---
 
-### Build
+### Build and Run
+
+#### Using CMake
+
+##### Pre Requirements
+- `oatpp 1.3.0` 
+- `oatpp-swagger 1.3.0`
+##### Build Project
 ```
 $ mkdir build && cd build
 $ cmake ..
 $ make
 ```
-### Set environment variable
-If you add the following line to .bashrc, you do not need to excute the setting in every session
+##### Set environment variable
 ```
 export GST_PLUGIN_PATH=<directory of kvssink plug-in>
+export SWAGGER_SERVER_IP=<IP address of the host>
 ```
-### Run web server
+(*Note: If you add the command lines above to ~/.bashrc, you do not need to excute the commands in every session*)
+##### Set Gstreamer parameters
+Customize gstreamer parameters at gstreamer.json, if necessary. Refere to src/dto/DTOs.hpp for the default values of the parameters. 
+```
+$ vi ../conf.d/gstreamer.json
+```
+#### Run the program
 ```
 $ ./kvs-producer-exe
-
 ```
-### Start kvs producer
-```
-$ curl http://localhost:8000/start
-
-```
-### Pause kvs producer
-```
-$ curl http://localhost:8000/pause
-
-```
-### Stop kvs producer
-```
-$ curl http://localhost:8000/stop_kvssink
-
-```
-### Send metadata to kvssink
-```
-$ curl -X POST -H "Content-Type: application/json" -d '{"x":100, "y":100, "z":100}' http://localhost:8000/send_metadata
-```
-### Monitor gstreamer pipeline
-You can start the continuous process (loop) as follows to monitor the bus and check any error or EOS (end of stream). If the process finds any error, EOS or kvssink state changed to NULL, it shutdowns the pipeline.
-- Connect websocket at 
-```
-ws://localhost:8000/ws
-```
-- Send a text message, 'monitor' to the socket (no ' for an actuall message)
+---
 ### Swagger to test APIs
 Access the following URL to test APIs
 ```
-http://localhost:8000
-
+http://<IP address of the host>:8080
 ```
