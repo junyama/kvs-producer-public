@@ -1,0 +1,6 @@
+{
+    "device": "/dev/videoFront",
+    "width": 640,
+    "height": 480,
+    "FPS": 30
+}

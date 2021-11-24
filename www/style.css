@@ -1,0 +1,40 @@
+
+#url {
+    width:99%;
+}
+
+#connecWsId {
+    width:99%;
+}
+
+#message {
+    width:99%;
+}
+
+#sendMsgId {
+    width:99%;
+}
+
+#resetId {
+    width:99%;
+}
+
+#logId {
+    height:150px;
+    padding:2px;
+    border:1px solid black;
+    font-size:12px;
+    overflow:auto;
+}
+
+#commandTableId {
+    width:100%;
+}
+
+.param {
+    width: 80px;
+}
+
+.buttonClass {
+    width: 100px;
+}
